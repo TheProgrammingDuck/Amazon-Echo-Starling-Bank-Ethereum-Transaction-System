@@ -3,33 +3,43 @@
   <section>
     <div class="content">
       <div class="inner">
-        <h2>Sed ipsum dolor</h2>
-        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+        <h2>Add contacts here</h2>
+          <form>
+            Name:<br>
+            <input type="text" name="name" id=nameId><br>
+            Ethereum Address:<br>
+            <input type="text" name="address" id=address>
+          </form>
         <ul class="actions">
-          <li><a href="#" class="button">Learn more</a></li>
+          <li><a href="#" class="button" id= addContact>Submit</a></li>
         </ul>
+          <script type="text/javascript">
+            $("#addContact").on("click", function(event){
+              var address = $("#address").val();
+              var name = $("#nameId").val();
+              if($("#list li").size() < 10){
+                  $("#myListName").append("<li>" + name + "</li>");
+                  $("#myListAddress").append("<li>" + address + "</li>");
+              }
+              // if($("#list li").size() < 10){
+              //     $("#myListAddress").append("<li>" + address + "</li>");
+              // }
+
+            });
+          </script>
       </div>
     </div>
   </section>
   <section>
     <div class="content">
       <div class="inner">
-        <h2>Feugiat consequat</h2>
-        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-        <ul class="actions">
-          <li><a href="#" class="button">Learn more</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="content">
-      <div class="inner">
-        <h2>Ultricies aliquam</h2>
-        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-        <ul class="actions">
-          <li><a href="#" class="button">Learn more</a></li>
-        </ul>
+        <h2>Contacts</h2>
+           <ul style="width:20%; float:left; list-style-type:none;" id=myListName>
+              <li><b>Name:</b></li>
+           </ul>
+           <ul style="width:10%; float:left; list-style-type:none;" id=myListAddress>
+              <li><b>Address:</b></li>
+           </ul>
       </div>
     </div>
   </section>

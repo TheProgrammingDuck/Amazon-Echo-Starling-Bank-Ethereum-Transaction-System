@@ -9,8 +9,16 @@
 	<div class="inner">
 	<h1>Please click here to start the server</h1>
 	<ul class="actions">
-	  <li><a href="#one" class="button scrolly" id=test>Start Server</a></li>
+	  <li><a href="#one" class="button scrolly" id=start>Start Server</a></li>
 	</ul>
+	<script type="text/javascript">
+		$("#start").on("click", function(event){
+			startServer();
+		});
+		function startServer(){
+			alert('Server started');
+		}
+	</script>
 	</div>
   </center>
 </section>
