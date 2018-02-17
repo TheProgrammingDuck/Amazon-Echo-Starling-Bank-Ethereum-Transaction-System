@@ -5,13 +5,14 @@ Finally, ensures that you cannot make transfers without uttering your passphrase
 
 
 
-
+<div>
 App user flow:
-
--User can authenticate themselves and create a list of contacts they want to transfer cash to on an Electron App.
--The Electron App uses oAuth to give the app permissions. Connects to the Starling Api to obtain data/ send payments on behalf of the user.
--The Electron App also runs a server on the local network. Our Amazon Echo voice assistant is connect to this local network.
--User authenticates beforehand. Then user can use the voice assistant to send cash. It sends a post request to the app which sends a request to the API.
+<ul>
+<li>User can authenticate themselves and create a list of contacts they want to transfer cash to on an Electron App. </li>
+<li>The Electron App uses oAuth to give the app permissions. Connects to the Starling Api to obtain data/ send payments on behalf of the user. </li>
+<li>The Electron App also runs a server on the local network. Our Amazon Echo voice assistant is connect to this local network. </li>
+<li>User authenticates beforehand. Then user can use the voice assistant to send cash. It sends a post request to the app which sends a request to the API. </li>
+</div>
 
 <div>
 General workload distribution:
@@ -22,6 +23,6 @@ General workload distribution:
   </ul>
 </div>
 
-Schedule:
+<b>Schedule:</b>
 <p>14:20-15:00: Flinn, get DevPost sorted. Vishal, get us an Amazon Echo. Both of us research the Starling API</p>
 <p>15:00-16:00: </p>
