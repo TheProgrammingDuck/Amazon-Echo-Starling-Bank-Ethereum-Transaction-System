@@ -1,15 +1,13 @@
 <template class="section-template">
 <section id="welcome" class="wrapper style1 fullscreen intro">
-  <script type="text/javascript">
-  	$("#test").click(function() {
-    alert("test");
-	});
-  </script>
+  <script src="assets/js/block.js"></script>
+  <script type="text/javascript" src="assets/js/web3.min.js"></script>
   <center>
 	<div class="inner">
 	<h1>Please click here to start the server</h1>
 	<ul class="actions">
 	  <li><a href="#one" class="button scrolly" id=start>Start Server</a></li>
+<!-- 	  <li><a href="#one" class="button scrolly" id=test>Test web3</a></li> -->
 	</ul>
 	<script type="text/javascript">
 		$("#start").on("click", function(event){
@@ -18,6 +16,10 @@
 		function startServer(){
 			alert('Server started');
 		}
+		$("#test").on("click", function(event){
+			getBalance();
+			//console.log('this worked');
+		});
 	</script>
 	</div>
   </center>
