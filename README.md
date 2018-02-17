@@ -13,11 +13,15 @@ App user flow:
 -The Electron App also runs a server on the local network. Our Amazon Echo voice assistant is connect to this local network.
 -User authenticates beforehand. Then user can use the voice assistant to send cash. It sends a post request to the app which sends a request to the API.
 
+<div>
 General workload distribution:
--Flinn builds Electron App UI
--Vishal develops a nodejs server that communicates with Amazon Echo
--Vishal gets Amazon Echo Alexa skills built.
+  <ul>
+<li>Flinn builds Electron App UI</li>
+<li-Vishal develops a nodejs server that communicates with Amazon Echo</li>
+<li>-Vishal gets Amazon Echo Alexa skills built.</li>
+  </ul>
+</div>
 
 Schedule:
-14:20-15:00: Flinn, get DevPost sorted. Vishal, get us an Amazon Echo. Both of us research the Starling API
-15:00-16:00: 
+<p>14:20-15:00: Flinn, get DevPost sorted. Vishal, get us an Amazon Echo. Both of us research the Starling API</p>
+<p>15:00-16:00: </p>
