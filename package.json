@@ -1,0 +1,32 @@
+{
+  "name": "amazon-echo-ethereum-api",
+  "version": "1.0.0",
+  "description": "a cool app",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "electron-debug": "^1.5.0",
+    "starling-developer-sdk": "^0.1.11"
+  },
+  "devDependencies": {
+    "devtron": "^1.1.0",
+    "electron": "^1.8.2",
+    "electron-packager": "^8.0.0",
+    "xo": "^0.18.0"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "electron ./Electron_App",
+    "build": "electron-packager ./Electron_App --out=dist --asar --overwrite --all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheProgrammingDuck/Amazon-Echo-Ethereum-API.git"
+  },
+  "author": "Flinn Dolman, Vishal Soomaney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheProgrammingDuck/Amazon-Echo-Ethereum-API/issues"
+  },
+  "homepage": "https://github.com/TheProgrammingDuck/Amazon-Echo-Ethereum-API#readme"
+}
