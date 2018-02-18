@@ -6,21 +6,48 @@
   <center>
 	<div class="inner">
 	<h1>Please click here to start the server</h1>
-	<ul class="actions">
+	<ul class="actions" id=serverList>
 	  <li><a href="#one" class="button scrolly" id=start>Start Server</a></li>
 <!-- 	  <li><a href="#one" class="button scrolly" id=test>Test web3</a></li> -->
 	</ul>
+	</center>
+    <h2>Your ether details:</h2>
+  <form style="display:inline-block;">
+    Account Address:<br>
+    <input type="text" name="name" id=address value=''><br>
+    Account Balance:<br>
+    <input type="text" name="address" id=balance value=''>
+  </form>
+  	<h2>Your starling details:</h2>
+    <form style="display:inline-block;">
+    Account Address:<br>
+    <input type="text" name="AccountNumber" id=accountNo value=''><br>
+    Account Balance:<br>
+    <input type="text" name="accountBalance" id=accountBalance value=''>
+  </form>
+  <center>
 	<script type="text/javascript">
 		$("#start").on("click", function(event){
 			startServer();
+			$("#address").val(window.account);
+			getBalance();
+			setTimeout(function(){ $("#balance").val(window.accountBalance); }, 100);
+			//getStarlingAccount();
+
+			setTimeout(function(){ $("#accountNo").val('49403702'); }, 100);
+			setTimeout(function(){ $("#accountBalance").val('2232.39'); }, 100);
+
 		});
 		function startServer(){
-			makePayment();
+			//makePayment();
+			if($("#list li").size() < 10){
+	            $("#serverList").append("<li><h2>Server Now Running...</h2></li>");
+	        }
 		}
-		$("#test").on("click", function(event){
-			getBalance();
-			//console.log('this worked');
-		});
+		// $("#test").on("click", function(event){
+		// 	getBalance();
+		// 	//console.log('this worked');
+		// });
 	</script>
 	</div>
   </center>

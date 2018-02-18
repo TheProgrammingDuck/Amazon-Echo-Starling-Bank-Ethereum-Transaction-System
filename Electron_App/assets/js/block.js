@@ -22,13 +22,16 @@
   };
 
   window.account = account;
-
+  window.accountBalance = null;
   window.sendDataObject = sendDataObject;
   window.web3 = web3;
 
+  window.staraccount = null;
+  window.starBalance = null;
+
   function getBalance() {
     window.web3.eth.getBalance(window.account, function (err, balance){
-        alert(parseFloat(window.web3.fromWei(balance, "ether")));
+        window.accountBalance = window.web3.fromWei(balance, "ether");
     });
   }
 

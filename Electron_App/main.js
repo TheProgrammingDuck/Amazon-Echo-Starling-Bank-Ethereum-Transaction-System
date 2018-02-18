@@ -8,7 +8,6 @@ const BrowserWindow = electron.BrowserWindow
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 1281, height: 800, minWidth: 1281, minHeight: 800})
@@ -28,14 +27,21 @@ function createWindow () {
   })
 }
 
-function makePayment(){
+function getStarlingAccount(){
+  window.staraccount = null;
+  window.starBalance = null;
   const client = new Starling({
     accessToken: 'nTnCpXU98EGSgwTGiT2STq6Ns7GWh9hFlyuf7ePPrVlCiGNqxuPXhwJh0yZzpkXC',
     apiUrl: 'https://api-sandbox.starlingbank.com'
   });
-  client.getBalance()
-    .then(({data}) =>  alert(data.availableToSpend))
+  ret = client.getAccount()
+    .then(({data}) =>  window.staraccount = data)
     .catch(err => alert('err'));
+  client.getBalance()
+  .then(({data}) =>  window.starBalance = data)
+  .catch(err => console.log(err)); 
+
+  return ret; 
 }  
 
 // This method will be called when Electron has finished

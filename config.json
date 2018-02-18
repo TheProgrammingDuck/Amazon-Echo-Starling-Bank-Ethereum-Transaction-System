@@ -1,0 +1,9 @@
+{
+  "clientId": "<application client id>",
+  "clientSecret": "<application client secret>",
+  ...
+  "sandboxLocalTokenStore": "../starling-api-web-starter-kit-sandbox-token-store.json",
+  "sandboxApi": "https://api-sandbox.starlingbank.com/",
+  "sandboxAccessToken": "<sandbox access token from Starling Developers site>",
+  "refreshToken": "<refresh token from Starling Developers site>",
+}
