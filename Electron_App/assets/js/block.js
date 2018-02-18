@@ -12,6 +12,7 @@
       console.log("Ethereum - connected to RPC server");
   }
   
+  
   var account = web3.eth.accounts[0];
 
 
@@ -26,8 +27,8 @@
   window.sendDataObject = sendDataObject;
   window.web3 = web3;
 
-  window.staraccount = null;
-  window.starBalance = null;
+  // window.staraccount = null;
+  // window.starBalance = null;
 
   function getBalance() {
     window.web3.eth.getBalance(window.account, function (err, balance){
