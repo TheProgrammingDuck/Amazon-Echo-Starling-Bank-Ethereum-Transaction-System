@@ -82,6 +82,10 @@ app.intent('SendEther', {
       }
       else {
 
+        if (ethAmount > 1000) {
+            res.say("I'm sorry, you're too poor to do that.");
+          }
+          else{
         //First check how much ether the person has. If he/she has enough then send requested amount to requested account.
         //Else purchase the requested amount and send it.
 
@@ -89,8 +93,8 @@ app.intent('SendEther', {
         var cashToWithdraw = ethAmount * 681;
         res.say("That's " + ethAmount + " ethereum");
         res.say("The current exchange rate is 681 pounds to 1 ethereum");
-        res.say("I will now withdraw " + cashToWithdraw + " pounds to purchase " + ethAmount + " ethereum. I will then send the ethereum to " + account + " using the Staling Bank account you specified in the application.");
-
+        res.say("I will now withdraw " + cashToWithdraw + " pounds to purchase " + ethAmount + " ethereum. I will then send the ethereum to " + account + " using the Starling Bank account you specified in the application.");
+          }
       }
 
     }
