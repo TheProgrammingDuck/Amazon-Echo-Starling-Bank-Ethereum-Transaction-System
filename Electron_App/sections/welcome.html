@@ -2,6 +2,7 @@
 <section id="welcome" class="wrapper style1 fullscreen intro">
   <script src="assets/js/block.js"></script>
   <script type="text/javascript" src="assets/js/web3.min.js"></script>
+  <script src="./main.js"></script>
   <center>
 	<div class="inner">
 	<h1>Please click here to start the server</h1>
@@ -14,7 +15,7 @@
 			startServer();
 		});
 		function startServer(){
-			alert('Server started');
+			makePayment();
 		}
 		$("#test").on("click", function(event){
 			getBalance();

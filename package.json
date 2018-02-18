@@ -6,6 +6,7 @@
   "dependencies": {
     "debug": "^3.1.0",
     "electron-debug": "^1.5.0",
+    "electron-log": "^2.2.14",
     "starling-developer-sdk": "^0.1.11"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
-const electron = require('electron')
+const electron = require('electron');
+const Starling = require('starling-developer-sdk');
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -26,6 +27,16 @@ function createWindow () {
     mainWindow = null
   })
 }
+
+function makePayment(){
+  const client = new Starling({
+    accessToken: 'nTnCpXU98EGSgwTGiT2STq6Ns7GWh9hFlyuf7ePPrVlCiGNqxuPXhwJh0yZzpkXC',
+    apiUrl: 'https://api-sandbox.starlingbank.com'
+  });
+  client.getBalance()
+    .then(({data}) =>  alert(data.availableToSpend))
+    .catch(err => alert('err'));
+}  
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
