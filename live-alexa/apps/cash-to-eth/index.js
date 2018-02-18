@@ -22,7 +22,7 @@ app.launch(function(req, res) {
   //res.session('number', number);
   //res.session('guesses', 0);
   var prompt = "Hi, I'm the Starling Bank to Ethereum interface voice assistant. ";
-  res.say(prompt).reprompt(prompt).shouldEndSession(false);
+  res.say(prompt).reprompt(prompt).shouldEndSession(true);
 });
 
 app.intent('GetEth', {
@@ -46,7 +46,7 @@ app.intent('GetEth', {
 
     }
 
-    res.shouldEndSession(false);
+    res.shouldEndSession(true);
   }
 );
 
@@ -59,7 +59,7 @@ app.intent('EtherInfo', {
 
     res.say();
 
-    res.shouldEndSession(false);
+    res.shouldEndSession(true);
   }
 );
 
@@ -95,7 +95,7 @@ app.intent('SendEther', {
 
     }
 
-    res.shouldEndSession(false);
+    res.shouldEndSession(true);
   }
 );
 
