@@ -1,0 +1,14 @@
+{
+  "name": "Cash-to-Ethereum-through-Starling-Bank-API",
+  "version": "1.0.0",
+  "description": "An alexa based Starling bank api interface to purchase Ethereum.",
+  "main": "index.js",
+  "author": "Vishal Soomaney Vijaykumar and Flinn Dolman",
+  "license": "ISC",
+  "alexa": {
+    "applicationId": "amzn1.ask.skill.6d35ed26-0287-4549-b825-d8fd2f17e9b7"
+  },
+  "dependencies": {
+    "alexa-app": "^2.1.0"
+  }
+}
